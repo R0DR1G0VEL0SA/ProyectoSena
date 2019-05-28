@@ -1,0 +1,11 @@
+1.creamos carpeta
+2.actualizar ionic si aplica
+3.crear paquetes del proyecto: ionic start logistics blank
+4.instalar Appflow :no
+5.crear servidor: ionic serve
+6.si aparece [ERROR] Sorry! ionic serve can only be run in an Ionic project directory
+digitamos ls y aparece: d-----        5/26/2019   9:16 AM                logistics 
+7.para ingresar a la carpete: cd logistics
+se repite punto 5 ionic serve
+8 para salir del  serve : Ctrl + C 
+9 para crear una nueva pagina/componente/service: ionic generated
