@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item >
+    <ion-label position="floating" text color ="medium" > <ion-icon name="person" item-left></ion-icon>&nbsp;&nbsp;Usuario</ion-label>
+    <ion-input type = "text"  [(ngModel)] = "user" name ="user"></ion-input>
+  </ion-item>
+
+  <ion-item color="white" >
+    <ion-label position="floating"text color ="medium"><ion-icon name="lock" item-left></ion-icon>&nbsp;&nbsp;Contraseña</ion-label>
+    <ion-input type = "password" [(ngModel)] = "password" name ="password"></ion-input>
+  </ion-item>
+  
+  <ion-item lines="none" color="white " href="/reset-password" size="10px">
+    <ion-label (click)="pushResetNavCtl()" color="medium " >¿No recuerdas la clave?</ion-label>
+  </ion-item >
+    <ion-button  (click)="OnSubmitLogin()" expand="block" fill="outline" shape="round" class="botonfondo" size="200px">Iniciar sesión</ion-button>
+  <ion-item   lines="none" color="white " >
+    <p color ="medium" class="letra" >¿Aun no tienes cuenta?</p>
+    <p (click)="pushRoleNavCtl()" color ="warning " class="letra">Regístrate</p>
+  </ion-item>
+</ion-content>
