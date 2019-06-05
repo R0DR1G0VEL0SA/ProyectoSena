@@ -59,6 +59,7 @@ export class Tab2Page implements OnInit {
        lng: rta.coords.longitude
      };
    }
+   
   
 
 }
