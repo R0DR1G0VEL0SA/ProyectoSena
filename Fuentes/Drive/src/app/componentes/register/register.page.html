@@ -1,11 +1,7 @@
-<ion-header>
-  <ion-toolbar>
+
       <ion-buttons slot="start">
           <ion-back-button defaultHref="role"></ion-back-button>
-        </ion-buttons>
-    <ion-title>register</ion-title>
-  </ion-toolbar>
-</ion-header>
+      </ion-buttons>
 
 <ion-content padding>
   <h3 text-center>Comencemos creando una cuenta</h3>
@@ -35,8 +31,15 @@
   <ion-input type = "password" [(ngModel)]="password"   name ="password"></ion-input>
 </ion-item>
   <hr/>
-  <ion-button  (click)="OnSubmitRegister()" expand="block">Ingresar</ion-button>
-  <br/> 
-  <p text-center  routerLink='/login'>ya tengo cuenta!</p>
+
+
+ <ion-label class = "letra"style="color:grey " text-justify>al continuar, acepto las condiciones del uso  de LOGISTICS y reconosco haber leido su politica de privacidad.
+          <hr>
+          Tambien acepto que LOGISTICS o sus representastes puedan contactar conmigo por email, Telefono o SMS (asi como a traves de medios automatizados) a través del email o del telefono que he indicado, incluso con fines promocionales.</ion-label>
+        <br><br>
+
+        <ion-button  (click)="OnSubmitRegister()" expand="block" color="secondary">Ingresar</ion-button>
+        <br/> 
+        <p text-center  routerLink='/login'>ya tengo cuenta!</p>
 
 </ion-content>
