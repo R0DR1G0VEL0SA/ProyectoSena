@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="dark">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="role"></ion-back-button>
+        </ion-buttons>
+       <ion-title>Rol</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <h3 text-center>Comencemos creando una cuenta</h3>
+<hr>
+<ion-item>
+  <ion-label position="floating">Nit</ion-label>
+  <ion-input type = "text"  [(ngModel)]="nit"  name ="nit"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">Razón Social</ion-label>
+  <ion-input type = "text" [(ngModel)]="razon"  name ="razon"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">Actividad Económica</ion-label>
+  <ion-input type = "tetx" [(ngModel)]="actividad"   name ="actividad"></ion-input>
+</ion-item>
+<ion-item>
+<ion-label position="floating">Nombre del Contacto</ion-label>
+  <ion-input type = "text" [(ngModel)]="name"  name ="name"></ion-input>
+</ion-item>
+  <ion-item>
+  <ion-label position="floating">Correo Electrónico</ion-label>
+  <ion-input type = "text" [(ngModel)]="email"   name ="email"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">Celular</ion-label>
+  <ion-input type = "text" [(ngModel)]="cel"   name ="cel"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">Contraseña</ion-label>
+  <ion-input type = "password" [(ngModel)]="password"   name ="password"></ion-input>
+</ion-item>
+  <hr/>
+
+ <ion-label class = "letra"style="color:grey " text-justify>al continuar, acepto las condiciones del uso  de LOGISTICS y reconosco haber leido su politica de privacidad.
+ </ion-label>
+   <br>
+  <ion-button  (click)="OnSubmitRegister()" expand="block" color="dark">Ingresar</ion-button>
+   <p text-center  routerLink='/login'>ya tengo cuenta!</p>
+
+</ion-content>

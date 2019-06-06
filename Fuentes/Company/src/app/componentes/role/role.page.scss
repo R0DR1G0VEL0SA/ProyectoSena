@@ -1,0 +1,66 @@
+ion-content.background2{
+    --background: url(../../assets/img/fondo1.jpg) 0 0/100% 100% no-repeat ;
+}
+
+
+.background{
+    --background: url(../../assets/img/conductor1.jpg) 0 0/100% 100% no-repeat ;
+}
+.background1{
+    --background: url(../../assets/img/empresas1.jpg) 0 0/100% 100% no-repeat ;
+}
+
+
+.img {
+    width: 100%;
+	filter: drop-shadow(10px -16px 30px black);
+	-webkit-filter: drop-shadow(10px -16px 30px black);
+    -moz-filter: drop-shadow(10px -16px 30px black);
+  
+  }
+
+  
+.tamaño {
+    font-size: 30px
+  
+  }
+
+  .icon{
+    
+    margin-left: 50%;
+    margin-right: 0%;
+    margin-top: 0%;
+    margin-bottom: 50%;
+    width: 30%;
+}
+ 
+.container
+{
+    display : flex;
+   flex-direction : row; 
+    justify-content : space-around;
+   flex-flow : wrap
+}
+@media screen and(max-width:1200px){
+    .background{
+
+        width: 40%;
+    }
+    .background1{
+
+        width: 40%;
+    }
+
+}
+
+@media screen and(max-width:600px){
+    .background{
+
+        width: 40%;
+    }
+    .background1{
+
+        width: 40%;
+    }
+
+}
