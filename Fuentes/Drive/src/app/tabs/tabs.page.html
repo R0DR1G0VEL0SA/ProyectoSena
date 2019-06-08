@@ -1,20 +1,35 @@
-<ion-tabs>
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>Home</ion-title>
+    <ion-chip  color="primary"  (click)="Onlogout()" slot = "end">
+        <ion-icon name="close-circle"></ion-icon>
+      </ion-chip>
+  </ion-toolbar>
+</ion-header>
 
-  <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="tab1">
-      <ion-icon name="home"></ion-icon>
-      <ion-label>Inicio</ion-label>
-    </ion-tab-button>
+<ion-content padding>
 
-    <ion-tab-button tab="tab2">
-      <ion-icon name="speedometer"></ion-icon>
-      <ion-label>Servicios</ion-label>
-    </ion-tab-button>
+    <ion-tabs >
 
-    <ion-tab-button tab="tab3">
-      <ion-icon name="person"></ion-icon>
-      <ion-label>Perfil</ion-label>
-    </ion-tab-button>
-  </ion-tab-bar>
+        <ion-tab-bar slot="top" color= "dark">
+          <ion-tab-button tab="tab1">
+            <ion-icon name="Disponible"></ion-icon>
+            <ion-label>Inicio</ion-label>
+          </ion-tab-button>
+      
+          <ion-tab-button tab="tab2">
+            <ion-icon name="En Proceso"></ion-icon>
+            <ion-label>Servicios</ion-label>
+          </ion-tab-button>
+      
+          <ion-tab-button tab="tab3">
+            <ion-icon name="Asignado"></ion-icon>
+            <ion-label>Perfil</ion-label>
+          </ion-tab-button>
+        </ion-tab-bar>
+      
+      </ion-tabs>
 
-</ion-tabs>
+</ion-content>
+
+

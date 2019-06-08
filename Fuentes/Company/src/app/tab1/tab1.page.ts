@@ -22,6 +22,10 @@ export class Tab1Page implements OnInit {
     this.loadMap();
  }
 
+ Onlogout() {
+  this.authservice.logout();
+}
+
  async loadMap(){
   //muestra el loading
   const loading = await this.loadCtrl.create();
@@ -57,10 +61,5 @@ export class Tab1Page implements OnInit {
      lng: rta.coords.longitude
    };
  }
- 
-
-  Onlogout() {
-    this.authservice.logout();
-  }
 
 }

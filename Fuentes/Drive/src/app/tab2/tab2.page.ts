@@ -11,6 +11,5 @@ import {  LoadingController } from '@ionic/angular';
 })
 export class Tab2Page {
 
- 
 
 }
