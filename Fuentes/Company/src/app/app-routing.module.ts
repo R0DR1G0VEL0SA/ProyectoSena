@@ -9,7 +9,14 @@ const routes: Routes = [
   { path: 'login', loadChildren: './componentes/login/login.module#LoginPageModule', canActivate : [NoLoginGuard] },
   { path: 'register', loadChildren: './componentes/register/register.module#RegisterPageModule' },
   { path: 'reset-password', loadChildren: './componentes/reset-password/reset-password.module#ResetPasswordPageModule' },
-  { path: 'role', loadChildren: './componentes/role/role.module#RolePageModule' }
+  { path: 'role', loadChildren: './componentes/role/role.module#RolePageModule' },
+  { path: 'home', loadChildren: './home/home.module#HomePageModule' },
+  
+
+  
+
+ 
+
 ];
 @NgModule({
   imports: [
