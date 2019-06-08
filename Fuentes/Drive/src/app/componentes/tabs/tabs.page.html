@@ -1,0 +1,65 @@
+
+
+<ion-header>
+    <ion-toolbar color="dark">
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+      <ion-title>Servicios de Carga</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+
+  <ion-menu side="start" menuId="first" >
+    <ion-header>
+      <ion-toolbar color="dark">
+        <ion-title>Logistics</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <div color="danger">
+          <img class="icon" src="assets/icon/conductor.png" >
+      </div>
+      <ion-list>
+          <ion-menu-toggle auto-hide="false">
+        <ion-item>Perfil<ion-icon name="person" slot="end"></ion-icon></ion-item>
+        <ion-item>Vehículos<ion-icon name="map" slot="end"></ion-icon></ion-item>
+        <ion-item>Documenetos</ion-item>
+        <ion-item>LogOut</ion-item>
+        <ion-item  (click)="presentAlertConfirm()" >Cerrar Sesion<ion-icon name="power" slot="end"></ion-icon></ion-item>
+  
+        
+      </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  
+  
+  <ion-router-outlet main></ion-router-outlet>
+  
+  <ion-content padding>
+  
+      <ion-tabs >
+  
+          <ion-tab-bar slot="top" color= "blank">
+            <ion-tab-button tab="tab1">
+              <ion-icon name="Disponible"></ion-icon>
+              <ion-label>Disponible</ion-label>
+            </ion-tab-button>
+        
+            <ion-tab-button tab="tab2">
+              <ion-icon name="En Proceso"></ion-icon>
+              <ion-label>En Proceso</ion-label>
+            </ion-tab-button>
+        
+            <ion-tab-button tab="tab3">
+              <ion-icon name="Asignado"></ion-icon>
+              <ion-label>Asignado</ion-label>
+            </ion-tab-button>
+          </ion-tab-bar>
+        
+        </ion-tabs>
+  
+  </ion-content>
+
+
