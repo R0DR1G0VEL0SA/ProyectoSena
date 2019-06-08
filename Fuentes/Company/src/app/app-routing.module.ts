@@ -12,6 +12,7 @@ const routes: Routes = [
   { path: 'role', loadChildren: './componentes/role/role.module#RolePageModule' },
   { path: 'home', loadChildren: './home/home.module#HomePageModule' },
   
+  
 
   
 

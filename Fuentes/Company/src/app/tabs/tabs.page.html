@@ -6,9 +6,11 @@
           <ion-menu-button></ion-menu-button>
         </ion-buttons>
     <ion-title>Home</ion-title>
-       <ion-chip  color="primary"  (click)="Onlogout()" slot = "end">
-        <ion-icon name="close-circle"></ion-icon>
-      </ion-chip>
+          <ion-buttons slot="primary">
+        <ion-button color="medium">
+          <ion-icon slot="icon-only" name="more"></ion-icon>
+        </ion-button>
+      </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -63,4 +65,5 @@
       </ion-tabs>
 
 </ion-content>
+
 

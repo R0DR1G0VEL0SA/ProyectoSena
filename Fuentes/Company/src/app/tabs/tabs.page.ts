@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MenuController, AlertController } from '@ionic/angular';
 import { AuthService } from '../servicios/auth.service';
 
+
 @Component({
   selector: 'app-tabs',
   templateUrl: 'tabs.page.html',
