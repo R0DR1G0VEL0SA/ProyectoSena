@@ -1,45 +1,45 @@
-
+<ion-header>
+  <ion-toolbar color="danger">
       <ion-buttons slot="start">
           <ion-back-button defaultHref="role"></ion-back-button>
-      </ion-buttons>
+        </ion-buttons>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
 
 <ion-content padding>
   <h3 text-center>Comencemos creando una cuenta</h3>
 <hr>
 <ion-item>
-  <ion-label position="floating">Nombre</ion-label>
+  <ion-label position="floating"><ion-icon name="person" item-left></ion-icon>&nbsp;&nbsp;Nombre</ion-label>
   <ion-input type = "text"  [(ngModel)]="firstName"  name ="firstName"></ion-input>
 </ion-item>
 <ion-item>
-  <ion-label position="floating">Apellidos</ion-label>
+  <ion-label position="floating"><ion-icon name="people" item-left></ion-icon>&nbsp;&nbsp;Apellidos</ion-label>
   <ion-input type = "text" [(ngModel)]="lastName"  name ="lastName"></ion-input>
 </ion-item>
 <ion-item>
-  <ion-label position="floating">Correo Electrónico</ion-label>
+  <ion-label position="floating"><ion-icon name="mail" item-left></ion-icon>&nbsp;&nbsp;Correo Electrónico</ion-label>
   <ion-input type = "tetx" [(ngModel)]="user"   name ="user"></ion-input>
 </ion-item>
 <ion-item>
-<ion-label position="floating">WhatsApp</ion-label>
+<ion-label position="floating"><ion-icon name="logo-whatsapp" item-left></ion-icon>&nbsp;&nbsp;WhatsApp</ion-label>
   <ion-input type = "text" [(ngModel)]="cel"  name ="cel"></ion-input>
 </ion-item>
   <ion-item>
-  <ion-label position="floating">Direccion de residencia</ion-label>
+  <ion-label position="floating"><ion-icon name="compass" item-left></ion-icon>&nbsp;&nbsp;Dirección de residencia</ion-label>
   <ion-input type = "text" [(ngModel)]="city"   name ="city"></ion-input>
 </ion-item>
 <ion-item>
-  <ion-label position="floating">Contraseña</ion-label>
+  <ion-label position="floating"><ion-icon name="lock" item-left></ion-icon>&nbsp;&nbsp;Contraseña</ion-label>
   <ion-input type = "password" [(ngModel)]="password"   name ="password"></ion-input>
 </ion-item>
   <hr/>
 
 
- <ion-label class = "letra"style="color:grey " text-justify>al continuar, acepto las condiciones del uso  de LOGISTICS y reconosco haber leido su politica de privacidad.
-          <hr>
-          Tambien acepto que LOGISTICS o sus representastes puedan contactar conmigo por email, Telefono o SMS (asi como a traves de medios automatizados) a través del email o del telefono que he indicado, incluso con fines promocionales.</ion-label>
-        <br><br>
-
-        <ion-button  (click)="OnSubmitRegister()" expand="block" color="secondary">Ingresar</ion-button>
-        <br/> 
-        <p text-center  routerLink='/login'>ya tengo cuenta!</p>
+ <p class = "letra "style="color:grey " text-center>Al continuar, acepto las condiciones del uso  de LOGISTICS</p>
+         <br>
+        <ion-button  (click)="OnSubmitRegister()" expand="block" color="light">Ingresar</ion-button>
+        <p style="color:grey " text-center   routerLink='/login'>ya tengo cuenta!</p>
 
 </ion-content>
