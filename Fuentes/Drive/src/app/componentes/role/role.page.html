@@ -1,14 +1,23 @@
-
-          <ion-back-button defaultHref="login" ></ion-back-button>
-    
-
-<ion-content padding class="background2">
-    <h3 text-center>Como quieres registrarte?</h3>
-    <hr>
-    <div style="width : 100% ; height : 50%" >
-        <ion-button expand="block" (click)="pushRegisterNavCtl()"  class="background tamaño " style="width : 100% ; height : 100%"  > </ion-button>
-    </div>
-
-    
-
-</ion-content>
+<ion-header>
+    <ion-toolbar color="danger">
+       <ion-buttons slot="start">
+        <ion-back-button defaultHref="login"></ion-back-button>
+        </ion-buttons>
+       <ion-title>Como quieres registrarte?</ion-title>
+    </ion-toolbar>
+   </ion-header>
+       
+   <ion-content padding>
+       <hr>
+         <ion-card (click)="pushRegisterNavCtl()">
+           <ion-card-header>
+             <ion-card-subtitle>Dueño de Vehículo</ion-card-subtitle>
+             <ion-card-title>Conductor Independiente</ion-card-title>
+           </ion-card-header>
+         
+           <ion-card-content>
+             Keep close to Nature's heart... and break clear away, once in awhile,
+             and climb a mountain or spend a week in the woods. Wash your spirit clean.
+           </ion-card-content>
+         </ion-card>
+   </ion-content>

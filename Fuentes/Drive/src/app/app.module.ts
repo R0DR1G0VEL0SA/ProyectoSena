@@ -13,14 +13,16 @@ import {firebaseConfig} from '../environments/environment';
 import {AngularFireModule} from '@angular/fire';
 import {AngularFireAuthModule } from '@angular/fire/auth';
 import {AngularFirestoreModule, FirestoreSettingsToken } from '@angular/fire/firestore';
-
+import { IntroPage } from './componentes/intro/intro.page';
 
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 
 
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
+  declarations: [AppComponent, IntroPage],
+  entryComponents: [
+    IntroPage
+  ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
