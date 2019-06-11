@@ -11,6 +11,12 @@ const routes: Routes = [
   { path: 'reset-password', loadChildren: './componentes/reset-password/reset-password.module#ResetPasswordPageModule' },
   { path: 'role', loadChildren: './componentes/role/role.module#RolePageModule' },
   { path: 'generar-servicio', loadChildren: './componentes/generar-servicio/generar-servicio.module#GenerarServicioPageModule' },
+  { path: 'company-data', loadChildren: './componentes/company-data/company-data.module#CompanyDataPageModule' },
+  { path: 'mapa', loadChildren: './componentes/mapa/mapa.module#MapaPageModule' },
+  { path: 'driver', loadChildren: './componentes/driver/driver.module#DriverPageModule' },
+  { path: 'support', loadChildren: './componentes/support/support.module#SupportPageModule' },
+
+
 
  
   

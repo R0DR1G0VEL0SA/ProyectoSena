@@ -1,11 +1,11 @@
 
 
 <ion-header>
-  <ion-toolbar color="dark">
+  <ion-toolbar color="light">
       <ion-buttons slot="start">
           <ion-menu-button></ion-menu-button>
         </ion-buttons>
-    <ion-title>Home</ion-title>
+    <ion-title>Servicio de Carga</ion-title>
           <ion-buttons slot="primary">
         <ion-button color="medium">
           <ion-icon slot="icon-only" name="more"></ion-icon>
@@ -18,7 +18,7 @@
 <ion-menu side="start" menuId="first" >
   <ion-header>
    
-    <ion-toolbar color="dark">
+    <ion-toolbar color="light">
         <ion-chip>
             <ion-avatar>
               <img src="assets/icon/LOGO1.png" >
@@ -28,17 +28,36 @@
     </ion-toolbar>
   </ion-header>
   <ion-content>
-      <img  src="assets/icon/empresas.jpg" >
-    <ion-list padding>
-        <ion-menu-toggle auto-hide="false">
-      <ion-item>perfil<ion-icon name="person" slot="end"></ion-icon></ion-item>
-      <ion-item>mapa<ion-icon name="map" slot="end"></ion-icon></ion-item>
-      <ion-item href="generar-servicio">Crear servicio<ion-icon name="stopwatch" slot="end"></ion-icon></ion-item>
-      <ion-item  (click)="presentAlertConfirm()" >Cerrar Sesion<ion-icon name="power" slot="end"></ion-icon></ion-item>
 
-      
-    </ion-menu-toggle>
-    </ion-list>
+
+      <img  src="assets/icon/empresas.jpg" >
+  <ion-list padding>
+        <ion-item routerLink="/company-data" detail>
+          <ion-icon src="assets/icon/car.svg" slot="start"></ion-icon>
+          <ion-label>Datos Basicos</ion-label>
+        </ion-item>
+        <ion-item routerLink="/mapa" detail>
+          <ion-icon src="assets/icon/doc.svg" slot="start"></ion-icon>
+          <ion-label>Mapa</ion-label>
+        </ion-item>
+        <ion-item routerLink="/driver" detail>
+          <ion-icon src="assets/icon/car.svg" slot="start"></ion-icon>
+          <ion-label>Buscar Conductor</ion-label>
+        </ion-item>
+        <ion-item routerLink="/generar-servicio" detail>
+          <ion-icon src="assets/icon/trailer.svg" slot="start"></ion-icon>
+          <ion-label>Crear servicio</ion-label>
+        </ion-item>
+        <ion-item routerLink="/support" detail>
+            <ion-icon src="assets/icon/laptop.svg"slot="start"></ion-icon>
+            <ion-label>Soporte</ion-label>
+        </ion-item>
+        <ion-item (click)="presentAlertConfirm()">
+          <ion-icon src="assets/icon/cancelar.svg" slot="start" ></ion-icon>
+          <ion-label>Cerrar Sesión</ion-label>
+        </ion-item>
+        
+      </ion-list>
   </ion-content>
 </ion-menu>
 
