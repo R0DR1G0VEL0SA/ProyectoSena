@@ -3,10 +3,40 @@
         <ion-buttons slot="start">
           <ion-back-button defaultHref="/car"></ion-back-button>
         </ion-buttons>
-        <ion-title>Datos Generales</ion-title>
+        <ion-title>Agregar Vehículo</ion-title>
       </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
+    <h5 text-center>Comencemos agregando un vehículo</h5>
+    <hr>
+    <ion-item>
+        <ion-label position="floating"><ion-icon name="pricetag" item-left></ion-icon>&nbsp;&nbsp;Placa</ion-label>
+        <ion-input type = "text"  [(ngModel)]="Placa"  name ="Placa"></ion-input>
+    </ion-item>
+    <ion-list>
+        <ion-list-header>Detalle</ion-list-header>
+        <ion-item>
+          <ion-label><ion-icon name="star" item-left></ion-icon>&nbsp;&nbsp;Marca</ion-label>
+          <ion-select placeholder="Seleccione">
+            <ion-select-option value="f">Volvo</ion-select-option>
+            <ion-select-option value="m">Mercedes</ion-select-option>
+            <ion-select-option value="m">Kenword</ion-select-option>
+          </ion-select>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label><ion-icon name="car" item-left></ion-icon>&nbsp;&nbsp;Tipo</ion-label>
+          <ion-select placeholder="Seleccione" okText="OK" cancelText="Cancel">
+            <ion-select-option value="brown">Mini Mula</ion-select-option>
+            <ion-select-option value="blonde">Mula</ion-select-option>
+            <ion-select-option value="black">Sencillo</ion-select-option>
+            <ion-select-option value="red">Doble Troque</ion-select-option>
+          </ion-select>
+        </ion-item>
+      
+      </ion-list> 
+      
+    <ion-button expand="block" color="light">Guardar</ion-button>
 
 </ion-content>
