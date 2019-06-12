@@ -8,7 +8,7 @@
   </ion-toolbar>
  </ion-header>
 
-<ion-content>
+<ion-content padding>
 
     <ion-toolbar color="light">
                  <ion-label>&nbsp;&nbsp;&nbsp;&nbsp;origen</ion-label>
@@ -59,10 +59,12 @@
             </ion-list>
             <ion-item>
                 <ion-label position="floating">Ciudad/ Municipio / vereda</ion-label>
+                <ion-input type = "text"  [(ngModel)]="citystart"  name ="citystart"></ion-input>
                 <ion-input></ion-input>
               </ion-item>
               <ion-item>
                   <ion-label position="floating">Dirección de Origen</ion-label>
+                  <ion-input type = "text"  [(ngModel)]="origin"  name ="origin"></ion-input>
                   <ion-input></ion-input>
                 </ion-item>
 
@@ -114,10 +116,12 @@
              </ion-list>
              <ion-item>
                  <ion-label position="floating">Ciudad/ Municipio / vereda</ion-label>
+                 <ion-input type = "text"  [(ngModel)]="cityfinal"  name ="cityfinal"></ion-input>
                  <ion-input></ion-input>
                </ion-item>
                <ion-item>
                   <ion-label position="floating">Dirección de Destino</ion-label>
+                  <ion-input type = "text"  [(ngModel)]="destination"  name ="destination"></ion-input>
                   <ion-input></ion-input>
                 </ion-item>
 
