@@ -9,15 +9,14 @@ const routes: Routes = [
   { path: 'login', loadChildren: './componentes/login/login.module#LoginPageModule', canActivate : [NoLoginGuard] },
   { path: 'register', loadChildren: './componentes/register/register.module#RegisterPageModule' },
   { path: 'reset-password', loadChildren: './componentes/reset-password/reset-password.module#ResetPasswordPageModule' },
-  { path: 'role', loadChildren: './componentes/role/role.module#RolePageModule' },  { path: 'personal-data', loadChildren: './componentes/personal-data/personal-data.module#PersonalDataPageModule' },
+  { path: 'role', loadChildren: './componentes/role/role.module#RolePageModule' },
+  { path: 'personal-data', loadChildren: './componentes/personal-data/personal-data.module#PersonalDataPageModule' },
   { path: 'car', loadChildren: './componentes/car/car.module#CarPageModule' },
   { path: 'document', loadChildren: './componentes/document/document.module#DocumentPageModule' },
   { path: 'record', loadChildren: './componentes/record/record.module#RecordPageModule' },
   { path: 'support', loadChildren: './componentes/support/support.module#SupportPageModule' },
   { path: 'trailer', loadChildren: './componentes/trailer/trailer.module#TrailerPageModule' },
-  { path: 'add-car', loadChildren: './componentes/add-car/add-car.module#AddCarPageModule' }
-
-
+  { path: 'add-car', loadChildren: './componentes/add-car/add-car.module#CarPageModule' }
 ];
 @NgModule({
   imports: [
