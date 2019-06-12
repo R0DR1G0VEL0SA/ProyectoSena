@@ -16,7 +16,7 @@ import {AngularFirestoreModule, FirestoreSettingsToken } from '@angular/fire/fir
 
 
 import { Geolocation } from '@ionic-native/geolocation/ngx';
-
+import { GoogleMaps } from '@ionic-native/google-maps';
 
 @NgModule({
   declarations: [AppComponent],
@@ -34,6 +34,7 @@ import { Geolocation } from '@ionic-native/geolocation/ngx';
     StatusBar,
     SplashScreen,
     Geolocation,
+    GoogleMaps,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     {provide: FirestoreSettingsToken, useValue: {}}
   ],
