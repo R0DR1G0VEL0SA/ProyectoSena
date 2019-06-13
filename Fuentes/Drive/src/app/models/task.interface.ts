@@ -1,6 +1,6 @@
 export interface TaskI {
  id?: string;
- task: string;
- priority: string;
-
-}
+ placa: string;
+ tipo: string;
+ marca: string;
+};

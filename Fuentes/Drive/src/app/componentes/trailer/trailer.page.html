@@ -7,16 +7,26 @@
       </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
     <ion-list>
         <ion-item-sliding *ngFor="let car of cars">
-          <ion-item lines="inset" button[routerLink]="['/car',car.id]">
+          <ion-item lines="inset" button [routerLink]="['/trailer']">
             <ion-label>
-                {{car.task}}
+              Marca:  {{car.marca}}
+            </ion-label>
+          </ion-item>
+          <ion-item lines="inset" >
+            <ion-label>
+              Tipo:  {{car.tipo}}
+            </ion-label>
+          </ion-item>
+          <ion-item lines="inset" >
+            <ion-label>
+              Placa:  {{car.placa}}
             </ion-label>
           </ion-item>
           <ion-item-options side ="end">
-              <ion-item-option (click)="onRemove(item)" color="secondary">
+              <ion-item-option  color="secondary">
                   <ion-icon name="checkmark" slot="end"></ion-icon>
               </ion-item-option>
              </ion-item-options>

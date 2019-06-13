@@ -11,12 +11,13 @@ const routes: Routes = [
   { path: 'reset-password', loadChildren: './componentes/reset-password/reset-password.module#ResetPasswordPageModule' },
   { path: 'role', loadChildren: './componentes/role/role.module#RolePageModule' },
   { path: 'personal-data', loadChildren: './componentes/personal-data/personal-data.module#PersonalDataPageModule' },
-  { path: 'car', loadChildren: './componentes/car/car.module#CarPageModule' },
+  { path: 'car', loadChildren: './componentes/car/car.module#CarPageModule'},
   { path: 'document', loadChildren: './componentes/document/document.module#DocumentPageModule' },
   { path: 'record', loadChildren: './componentes/record/record.module#RecordPageModule' },
   { path: 'support', loadChildren: './componentes/support/support.module#SupportPageModule' },
   { path: 'trailer', loadChildren: './componentes/trailer/trailer.module#TrailerPageModule' },
-  { path: 'add-car', loadChildren: './componentes/add-car/add-car.module#CarPageModule' }
+  { path: 'add-car', loadChildren: './componentes/add-car/add-car.module#AddCarPageModule'},  { path: 'detail-car', loadChildren: './componentes/detail-car/detail-car.module#DetailCarPageModule' }
+
 ];
 @NgModule({
   imports: [

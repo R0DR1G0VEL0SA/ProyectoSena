@@ -14,9 +14,7 @@ export class TrailerPage implements OnInit {
   constructor( private carService: CarService ) { }
 
   ngOnInit() {
-    this.carService.getCars().subscribe(res =>{
-      console.log('Tareas', res);
-    });
+    this.carService.getCars().subscribe(res => {this.cars = res });
   }
 
 }
