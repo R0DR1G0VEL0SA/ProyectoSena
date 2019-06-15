@@ -11,18 +11,18 @@
   
     <ion-list>
           <ion-item-sliding *ngFor="let car of cars">
-            <ion-card button [routerLink]="['/detail-car']">
-                <ion-item >
+            <ion-card button [routerLink]="['/detail',car.id]">
+                <ion-item lines="none">
                   <ion-label>
                     Marca:  {{car.marca}}
                   </ion-label>
                 </ion-item>
-                <ion-item lines="inset" >
+                <ion-item lines="none" >
                   <ion-label>
                     Tipo:  {{car.tipo}}
                   </ion-label>
                 </ion-item>
-                <ion-item lines="inset" >
+                <ion-item lines="none" >
                   <ion-label>
                     Placa:  {{car.placa}}
                   </ion-label>
@@ -32,21 +32,19 @@
                         <ion-icon name="checkmark" slot="end"></ion-icon>
                     </ion-item-option>
                    </ion-item-options>
+                   
             </ion-card>
-              
             </ion-item-sliding>
+            
     </ion-list>
-   
-    
+
   <!-- fab placed to the bottom and start and on the bottom edge of the content overlapping footer with a list to the right -->
   <ion-fab vertical="bottom" horizontal="end" >
       <ion-fab-button color="secondary">
         <ion-icon name="add"></ion-icon>
       </ion-fab-button>
       <ion-fab-list side="top">
-          <ion-fab-button routerLink="/add-car"><ion-icon name="create"></ion-icon></ion-fab-button>
-          <ion-fab-button><ion-icon name="car"></ion-icon></ion-fab-button>
-          <ion-fab-button><ion-icon name="trash"></ion-icon></ion-fab-button>
+          <ion-fab-button routerLink="/detail"><ion-icon name="create"></ion-icon></ion-fab-button>
       </ion-fab-list>
     </ion-fab>
 

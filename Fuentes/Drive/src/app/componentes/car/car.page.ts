@@ -14,5 +14,6 @@ export class CarPage implements OnInit {
 
   ngOnInit() {
     this.carService.getCars().subscribe(res => {this.cars = res });
+  
   }
 }

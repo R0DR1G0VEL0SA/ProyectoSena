@@ -3,4 +3,5 @@ export interface TaskI {
  placa: string;
  tipo: string;
  marca: string;
+ createdAt: number;
 };

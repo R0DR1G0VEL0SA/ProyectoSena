@@ -16,7 +16,11 @@ const routes: Routes = [
   { path: 'record', loadChildren: './componentes/record/record.module#RecordPageModule' },
   { path: 'support', loadChildren: './componentes/support/support.module#SupportPageModule' },
   { path: 'trailer', loadChildren: './componentes/trailer/trailer.module#TrailerPageModule' },
-  { path: 'add-car', loadChildren: './componentes/add-car/add-car.module#AddCarPageModule'},  { path: 'detail-car', loadChildren: './componentes/detail-car/detail-car.module#DetailCarPageModule' }
+  { path: 'add-car', loadChildren: './componentes/add-car/add-car.module#AddCarPageModule'},
+  { path: 'detail-car', loadChildren: './componentes/detail-car/detail-car.module#DetailCarPageModule' },
+  { path: 'detail/:id', loadChildren: './componentes/detail-car/detail-car.module#DetailCarPageModule'},
+  { path: 'detail', loadChildren: './componentes/detail-car/detail-car.module#DetailCarPageModule' }
+
 
 ];
 @NgModule({

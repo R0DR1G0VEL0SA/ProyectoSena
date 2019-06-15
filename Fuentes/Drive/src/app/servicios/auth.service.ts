@@ -9,6 +9,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
   providedIn: 'root'
 })
 export class AuthService {
+  [x: string]: any;
 
 
   constructor(private AFauth: AngularFireAuth, private router: Router, private db: AngularFirestore) { }
@@ -58,7 +59,8 @@ export class AuthService {
         resolve(res);
       }).catch( err => reject(err));
     });
-
-
+  }
+  getAuth() {
+    return this.AFauth.auth;
   }
 }

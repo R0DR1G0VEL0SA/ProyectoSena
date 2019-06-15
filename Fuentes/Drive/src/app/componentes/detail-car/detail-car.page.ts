@@ -16,24 +16,45 @@ export class DetailCarPage implements OnInit {
   constructor(private route: ActivatedRoute,
               private nav: NavController,
               private carService: CarService,
-              private loadinController: LoadingController ) { }
-  
-
+              private loadingController: LoadingController ) { }
   ngOnInit() {
+// tslint:disable-next-line: no-string-literal
     this.carId = this.route.snapshot.params['id'];
-    if (this.carId){
+    if (this.carId) {
       this.loadCar();
+      console.log('car');
     }
   }
-  
-  async loadCar(){
-    const loading =  await this.loadinController.create({
+  async loadCar() {
+    const loading =  await this.loadingController.create({
       message: 'Espere....'
     });
     await loading.present();
-    this.carService.getCar(this.carId).subscribe(car=>{
+    this.carService.getCar(this.carId).subscribe(car=> {
       loading.dismiss();
       this.car = car;
     });
+  }
+
+  async saveCar() {
+    const loading = await this.loadingController.create({
+      message: 'Guardando....'
+    });
+    await loading.present();
+ 
+    if (this.carId) {
+      this.carService.updateCar(this.car, this.carId).then(() => {
+        loading.dismiss();
+        this.nav.navigateForward('/car');
+      });
+    } else {
+      this.carService.addCar(this.car).then(() => {
+        loading.dismiss();
+        this.nav.navigateForward('/car');
+      });
+    }
+  }
+  async onRemoveCar(idCar: string) {
+    this.carService.removeCar(idCar);
   }
 }

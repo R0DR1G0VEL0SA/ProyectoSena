@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { promise } from 'protractor';
 import { Router } from '@angular/router';
-import { AngularFirestore,AngularFirestoreCollection } from '@angular/fire/firestore';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { Observable} from 'rxjs';
 import {map} from 'rxjs/operators';
 import { TaskI} from '../models/task.interface';
@@ -32,11 +32,11 @@ export class CarService {
     return this.cars;
   }
 
-  getCar(id: string){
+  getCar(id){
     return this.carsCollection.doc<TaskI>(id).valueChanges();
   }
 
-  updateCar(car: TaskI, id: string){
+  updateCar(car: TaskI, id){
     return this.carsCollection.doc(id).update(car);
   }
 
@@ -44,7 +44,7 @@ export class CarService {
     return this.carsCollection.add(car);
   }
 
-  removeCar(id: string){
+  removeCar(id){
     return this.carsCollection.doc(id).delete();
   }
 
