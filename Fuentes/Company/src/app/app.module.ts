@@ -18,6 +18,8 @@ import {AngularFirestoreModule, FirestoreSettingsToken } from '@angular/fire/fir
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { GoogleMaps } from '@ionic-native/google-maps';
 
+import { IonicStorageModule } from '@ionic/storage';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -28,6 +30,10 @@ import { GoogleMaps } from '@ionic-native/google-maps';
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
     AngularFirestoreModule,
+    IonicStorageModule.forRoot({
+      name: 'coordenadas',
+      driverOrder: ['indexeddb']
+    })
   
   ],
   providers: [
