@@ -8,7 +8,7 @@ import {CarService} from '../../servicios/car.service';
   styleUrls: ['./car.page.scss'],
 })
 export class CarPage implements OnInit {
-  cars: TaskI[];
+  public cars = new Array<TaskI>();
 
   constructor(private carService: CarService) { }
 
