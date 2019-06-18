@@ -4,6 +4,7 @@ import { LoadingController, ToastController } from '@ionic/angular';
 import { Servicio } from '../../models/servicio';
 import { Subscription } from 'rxjs';
 import { ServicioService } from '../../servicios/servicio.service';
+import { forEach } from '@angular/router/src/utils/collection';
 
 @Component({
   selector: 'app-tab1',
@@ -21,11 +22,24 @@ export class Tab1Page implements OnInit{
               private toastCtrl: ToastController) 
               {
                 this.serviciosSubscription = this.servicioService.getServicios().subscribe(data => {
-                  this.servicios = data;})
+                  data.forEach(element => {
+                    console.log("T: "+element.estado);
+                    if(element.estado.toString() === "1" )
+                    { 
+                      
+                      this.servicios.push(element);
+                    }
+                  });
+                    
+                  //  console.log()
+                  })                
               }
-  
 
-  ngOnInit() {}
+  ngOnInit() {
+
+
+  }
+
   // tslint:disable-next-line: use-life-cycle-interface
   ngOnDestroy() {this.serviciosSubscription.unsubscribe();}
 
