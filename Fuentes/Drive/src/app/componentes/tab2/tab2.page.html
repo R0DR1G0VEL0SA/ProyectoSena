@@ -1,5 +1,5 @@
 
-  <ion-content padding>
+<ion-content padding>
     <!-- Default Animations -->
 <ion-list *ngIf="!servicios.length">
         <ion-item *ngFor="let item of [0]">
@@ -19,8 +19,8 @@
           </ion-label>
         </ion-item>
       </ion-list>
-      <ion-list *ngFor="let servicio of servicios"> 
-            <ion-item-sliding >
+      <ion-list > 
+            <ion-item-sliding *ngFor="let servicio of servicios">
               <ion-item button >
                 <ion-avatar slot="start">
                   <img src="assets/icon/map.svg">

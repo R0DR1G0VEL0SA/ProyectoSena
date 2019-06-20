@@ -3,7 +3,7 @@ import { AuthService } from '../../servicios/auth.service';
 import { LoadingController, ToastController } from '@ionic/angular';
 import { Servicio } from '../../models/servicio';
 import { Subscription } from 'rxjs';
-import { ServicioService } from '../../servicios/servicio.service';
+import { ServicioService } from './servicio.service';
 import { forEach } from '@angular/router/src/utils/collection';
 
 @Component({
