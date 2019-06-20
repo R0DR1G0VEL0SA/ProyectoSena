@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar color="danger">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
+      </ion-buttons>
+      <ion-title>Detalle </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list >
+        <ion-item *ngIf="car">
+            <ion-input required type="text" placeholder="Placa :" [(ngModel)]="servicio.nombre"></ion-input>
+          </ion-item>
+      </ion-list>
+      
+</ion-content>

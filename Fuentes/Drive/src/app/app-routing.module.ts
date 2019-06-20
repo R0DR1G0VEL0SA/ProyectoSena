@@ -19,7 +19,11 @@ const routes: Routes = [
   { path: 'add-car', loadChildren: './componentes/add-car/add-car.module#AddCarPageModule'},
   { path: 'detail-car', loadChildren: './componentes/detail-car/detail-car.module#DetailCarPageModule' },
   { path: 'detail/:id', loadChildren: './componentes/detail-car/detail-car.module#DetailCarPageModule'},
-  { path: 'detail', loadChildren: './componentes/detail-car/detail-car.module#DetailCarPageModule' }
+  { path: 'detail', loadChildren: './componentes/detail-car/detail-car.module#DetailCarPageModule' },
+  { path: 'detail-tab1', loadChildren: './componentes/detail-tab1/detail-tab1.module#DetailTab1PageModule' },
+  { path: 'detail1/:id', loadChildren: './componentes/detail-tab1/detail-tab1.module#DetailTab1PageModule' },
+  { path: 'detail1', loadChildren: './componentes/detail-tab1/detail-tab1.module#DetailTab1PageModule' }
+
 
 
 ];

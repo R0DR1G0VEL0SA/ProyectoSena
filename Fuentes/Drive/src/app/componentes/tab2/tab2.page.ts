@@ -3,7 +3,6 @@ import { AuthService } from '../../servicios/auth.service';
 import { LoadingController, ToastController } from '@ionic/angular';
 import { Subscription } from 'rxjs';
 import { Servicio2Service} from '../tab2/servicio2.service';
-import { forEach } from '@angular/router/src/utils/collection';
 import { Servicio } from 'src/app/models/servicio';
 
 
@@ -25,7 +24,6 @@ export class Tab2Page implements OnInit{
     {
       this.serviciosSubscription = this.servicioService.getServicios().subscribe(data => {
         data.forEach(element => {
-          console.log("T: "+element.estado);
           if(element.estado.toString() === "2" )
           { 
             
