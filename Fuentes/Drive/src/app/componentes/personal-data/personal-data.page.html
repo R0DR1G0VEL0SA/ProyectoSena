@@ -22,39 +22,65 @@
 
 <!-- Default Animations -->
 <ion-list *ngIf="!persons.length">
-  <ion-item *ngFor="let item of [0]">
-    <ion-avatar slot="start">
-      <ion-skeleton-text animated></ion-skeleton-text>
-    </ion-avatar>
+  <ion-card *ngFor="let item of [0]" padding>
     <ion-label>
       <h3>
         <ion-skeleton-text animated style="width: 30%"></ion-skeleton-text>
       </h3>
-      <p>
-        <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
-      </p>
-      <p>
-        <ion-skeleton-text animated style="width: 600%"></ion-skeleton-text>
-      </p>
     </ion-label>
-  </ion-item>
+    <ion-label>
+      <h3>
+        <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
+      </h3>
+    </ion-label>
+    <ion-label>
+      <h3>
+        <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+       </h3>
+    </ion-label>
+    <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 30%"></ion-skeleton-text>
+        </h3>
+    </ion-label>
+    <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </h3>
+    </ion-label>
+    <ion-label>
+         <h3>
+            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+         </h3>
+     </ion-label>
+    
+  </ion-card>
 </ion-list>
 
 <ion-list>
-  <ion-item-sliding *ngFor="let person of persons">
-    <ion-item button >
-      <ion-avatar slot="start">
-        <img src="assets/icon/hombre.svg">
-      </ion-avatar>
-      <ion-label>
-        <p>{{ person.nombres }} {{ person.apellidos }}</p>
-        <p>{{ person.correo}}</p>
-        <p>{{ person.id}}</p>
-      </ion-label>
-      <ion-note color="primary" slot="end" *ngIf="person.celular">{{ person.celular  }}</ion-note>
-    </ion-item>
-  </ion-item-sliding>
+  <ion-card *ngFor="let person of persons" padding>
+      <ion-item>
+          <p> Nombre : {{ person.nombres }} {{ person.apellidos }}</p>
+      </ion-item>
+      <ion-item>
+          <p>ID : {{ person.id }} </p>
+      </ion-item>
+      <ion-item>
+          <p>Correo : {{ person.correo }} </p>
+      </ion-item>
+      <ion-item>
+          <p>Dirección : {{ person.direccion }} </p>
+      </ion-item>
+      <ion-item>
+          <p>Celular : {{ person.celular }} </p>
+      </ion-item>
+      <ion-item>
+          <p>Rol : Conductor </p>
+      </ion-item>
+      <br>
+  </ion-card>
 </ion-list>
+
 
 </ion-content>
 
