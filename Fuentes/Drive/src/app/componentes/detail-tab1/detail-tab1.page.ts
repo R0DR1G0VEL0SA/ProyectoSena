@@ -33,10 +33,6 @@ export class DetailTab1Page implements OnInit {
   lngB : number;
   polyline = false;
 
-
-
-
-
   constructor(private route: ActivatedRoute,
               private storage: Storage,
               private geolocation: Geolocation,
