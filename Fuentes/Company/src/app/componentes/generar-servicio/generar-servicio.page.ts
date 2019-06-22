@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Servicio1Service } from '../generar-servicio/servicio1.service';
+
 
 @Component({
   selector: 'app-generar-servicio',
@@ -7,9 +9,44 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GenerarServicioPage implements OnInit {
 
-  constructor() { }
+  servicio = {
+    origen: '',
+    destino: '',
+    fechainicio: '',
+    fechafinal: '',
+    ciudadinicio: '',
+    ciudadfinal: '',
+    flete: '',
+    evento: '',
+    estado: '',
+    nombre: '',
+    
+
+  }  
+
+  constructor(private Service: Servicio1Service) { }
 
   ngOnInit() {
   }
+
+  clicBoton() {
+    this.Service.crearServicio(this.servicio)
+    .then(
+      _res => {
+        console.log("Se ha guardado el registro");
+        this.servicio.origen = '';
+        this.servicio.destino = '';
+        this.servicio.fechainicio = '';
+        this.servicio.fechafinal = '';
+        this.servicio.ciudadinicio = '';
+        this.servicio.ciudadfinal = '';
+        this.servicio.flete = '';
+        this.servicio.evento = '';
+        this.servicio.estado = '';
+        this.servicio.nombre = '';
+      }
+    )
+  }
+  
 
 }
