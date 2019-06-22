@@ -19,25 +19,19 @@ export class Tab1Page implements OnInit{
   constructor(public authservice: AuthService,
               private loadingCtrl: LoadingController,
               private servicioService: ServicioService,
-              private toastCtrl: ToastController) 
-              {
-                this.serviciosSubscription = this.servicioService.getServicios().subscribe(data => {
-                  data.forEach(element => {
-                    console.log("T: "+element.estado);
-                    if(element.estado.toString() === "1" )
-                    { 
-                      
-                      this.servicios.push(element);
-                    }
-                  });
-                    
-                  //  console.log()
-                  })                
-              }
+              private toastCtrl: ToastController) { }
 
   ngOnInit() {
-
-
+    this.serviciosSubscription = this.servicioService.getServicios().subscribe(data => {
+      data.forEach(element => {
+        console.log("T: "+element.estado);
+        if(element.estado.toString() === "1" )
+        {  
+          this.servicios.push(element);
+        }
+      });
+        
+      })       
   }
 
   // tslint:disable-next-line: use-life-cycle-interface

@@ -26,10 +26,10 @@
                 </ion-avatar>
                 <ion-label>
                   <p>Empresa : {{servicio.nombre }}</p>
-                  <p>id: {{servicio.uiid }}</p>
                   <p>Valor Flete : ${{servicio.flete }}</p>
                   <p>Origen : {{servicio.origen }} </p>
                   <p>Destino : {{servicio.destino }} </p>
+                  <p>Valor id : {{servicio.id}}</p>
                 </ion-label>
                 <ion-note color="success" slot="end" *ngIf="servicio.evento">{{ servicio.evento}}</ion-note>
               </ion-item>
