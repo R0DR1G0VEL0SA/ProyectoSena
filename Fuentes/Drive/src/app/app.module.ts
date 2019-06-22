@@ -14,9 +14,9 @@ import {AngularFireModule} from '@angular/fire';
 import {AngularFireAuthModule } from '@angular/fire/auth';
 import {AngularFirestoreModule, FirestoreSettingsToken } from '@angular/fire/firestore';
 import { IntroPage } from './componentes/intro/intro.page';
-
+import { IonicStorageModule } from '@ionic/storage';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
-
+import { GoogleMaps } from '@ionic-native/google-maps';
 
 @NgModule({
   declarations: [AppComponent, IntroPage],
@@ -30,12 +30,17 @@ import { Geolocation } from '@ionic-native/geolocation/ngx';
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
     AngularFirestoreModule,
+    IonicStorageModule.forRoot({
+      name: 'coordenadas',
+      driverOrder: ['indexeddb']
+    })
   
   ],
   providers: [
     StatusBar,
     SplashScreen,
     Geolocation,
+    GoogleMaps,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     {provide: FirestoreSettingsToken, useValue: {}}
   ],
