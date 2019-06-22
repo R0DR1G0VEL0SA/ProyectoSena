@@ -7,7 +7,7 @@ export const environment = {
 };
 
 export const firebaseConfig = {
-  apiKey: 'AIzaSyCl2DCafZoNkBHendULvyBxPm2BKieBShI',
+  apiKey: 'AIzaSyDZaEUa1IncX9fu-rCWdWtQ7Gwu6w6039c',
   authDomain: 'logistics-e6411.firebaseapp.com',
   databaseURL: 'https://logistics-e6411.firebaseio.com',
   projectId: 'logistics-e6411',
