@@ -3,6 +3,7 @@ import { Servicio } from '../../models/servicio';
 import { ServicioService } from '../../componentes/tab1/servicio.service';
 import { ActivatedRoute } from '@angular/router';
 import { NavController, LoadingController} from '@ionic/angular';
+import { ActionSheetController } from '@ionic/angular';
 
 @Component({
   selector: 'app-detail-tab1',
@@ -16,7 +17,8 @@ export class DetailTab1Page implements OnInit {
   constructor(private route: ActivatedRoute,
               private nav: NavController,
               private servicioService: ServicioService,
-              private loadingController: LoadingController) { }
+              private loadingController: LoadingController,
+              public actionSheetController: ActionSheetController) { }
 
   ngOnInit() {
 
@@ -35,7 +37,49 @@ export class DetailTab1Page implements OnInit {
     this.servicioService.getServicio(this.servicioId).subscribe(servicio=> {
       loading.dismiss();
       this.servicio = servicio;
+      console.log(servicio.id);
     });
   }
 
+  async presentActionSheet() {
+    const actionSheet = await this.actionSheetController.create({
+      header: 'Detalle del servicio de carga',
+
+      buttons: [{
+        text: 'Empresa :'+ ' '+ this.servicio.nombre,
+        role: 'destructive',
+        icon: 'trash',
+        handler: () => {
+          console.log('Delete clicked');
+        }
+      }, {
+        text: 'Share',
+        icon: 'share',
+        handler: () => {
+        }
+      }, {
+        text: 'Play (open modal)',
+        icon: 'arrow-dropright-circle',
+        handler: () => {
+          console.log('Play clicked');
+        }
+      }, {
+        text: 'Favorite',
+        icon: 'heart',
+        handler: () => {
+          console.log('Favorite clicked');
+        }
+      }, {
+        text: 'Cancel',
+        icon: 'close',
+        role: 'cancel',
+        handler: () => {
+          console.log('Cancel clicked');
+        }
+      }]
+    });
+    await actionSheet.present();
+  }
+
+  
 }

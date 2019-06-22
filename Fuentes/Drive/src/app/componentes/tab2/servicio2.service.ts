@@ -3,7 +3,6 @@ import { AuthService } from '../../servicios/auth.service';
 import { LoadingController, ToastController } from '@ionic/angular';
 import { Servicio } from '../../models/servicio';
 import { Subscription, Observable } from 'rxjs';
-import { ServicioService } from '../../servicios/servicio.service';
 import { forEach } from '@angular/router/src/utils/collection';
 import { AngularFirestoreCollection, AngularFirestore } from '@angular/fire/firestore';
 import { map } from 'rxjs/operators';
