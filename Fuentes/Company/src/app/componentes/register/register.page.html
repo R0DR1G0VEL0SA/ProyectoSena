@@ -1,9 +1,9 @@
 <ion-header>
-  <ion-toolbar color="dark">
+  <ion-toolbar color="light">
       <ion-buttons slot="start">
-        <ion-back-button defaultHref="role"></ion-back-button>
+        <ion-back-button  color="medium" defaultHref="role"></ion-back-button>
         </ion-buttons>
-       <ion-title>Rol</ion-title>
+       <ion-title color="medium" >Rol</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -43,7 +43,7 @@
  <ion-label class = "letra"style="color:grey " text-justify>al continuar, acepto las condiciones del uso  de LOGISTICS y reconosco haber leido su politica de privacidad.
  </ion-label>
    <br>
-  <ion-button  (click)="OnSubmitRegister()" expand="block" color="dark">Ingresar</ion-button>
-   <p text-center  routerLink='/login'>ya tengo cuenta!</p>
+  <ion-button   (click)="OnSubmitRegister()" expand="block" color="light"><span style="color: #ffffff;">Ingresar</span></ion-button>
+   <p text-center  routerLink='/login'>¡ya tengo cuenta!</p>
 
 </ion-content>
