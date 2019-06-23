@@ -22,10 +22,11 @@ export class Tab1Page implements OnInit{
               private toastCtrl: ToastController) { }
 
   ngOnInit() {
+    
     this.serviciosSubscription = this.servicioService.getServicios().subscribe(data => {
       data.forEach(element => {
         console.log("T: "+element.estado);
-        if(element.estado.toString() === "1" )
+        if(element.estado.toString() === "1")
         {  
           this.servicios.push(element);
         }

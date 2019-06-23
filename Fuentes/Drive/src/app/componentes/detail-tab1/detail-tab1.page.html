@@ -7,33 +7,48 @@
     </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-    <ion-button expand ="full"   color="light" (click)="presentActionSheet()">
-      <ion-label>Ver Detalle del Servicio</ion-label>
-    </ion-button> 
-
-
-        <!-- this creates a google map on the page with the given lat/lng from -->
+<ion-content>
+    <ion-row>
+        <ion-col size="12">
+           <!-- this creates a google map on the page with the given lat/lng from -->
         <!-- the component as the initial center of the map: -->  
         <agm-map  (mapClick)="agregarMarcador($event)" [latitude]="lat" [longitude]="lng" [zoom]='16'>
-          <agm-marker *ngFor="let marcador of marcadores" [latitude]="marcador.lat" [longitude]="marcador.lng"  width="50%">
-           <!-- <agm-marker *ngFor="let marcador of marcadores" [latitude]="marcador.lat" [longitude]="marcador.lng" iconUrl="icon/marcador.png" width="50%">-->
-         
-            <agm-info-window>
-                <strong>{{marcadores.title}}</strong>
-                <p>{{marcadores.description}}</p>
-              </agm-info-window>
-          </agm-marker>
-           <agm-polygon *ngIf="polygon"  [paths]="paths" fillColor="#FFFFFF" strokeColor="#FFFFFF">
-          </agm-polygon>
-          <agm-polyline *ngIf="polyline" strokeColor="#FFFFFF" >
-            <agm-polyline-point [latitude]="latA" [longitude]="lngA">
-            </agm-polyline-point>
-            <agm-polyline-point [latitude]="latB" [longitude]="lngB">
-            </agm-polyline-point>
-        </agm-polyline>
-        </agm-map>
-     
-
-
+            <agm-marker *ngFor="let marcador of marcadores" [latitude]="marcador.lat" [longitude]="marcador.lng"  width="50%">
+             <!-- <agm-marker *ngFor="let marcador of marcadores" [latitude]="marcador.lat" [longitude]="marcador.lng" iconUrl="icon/marcador.png" width="50%">-->
+              <agm-info-window>
+                  <strong>{{marcadores.title}}</strong>
+                  <p>{{marcadores.description}}</p>
+                </agm-info-window>
+            </agm-marker>
+             <agm-polygon *ngIf="polygon"  [paths]="paths" fillColor="#FFFFFF" strokeColor="#FFFFFF">
+            </agm-polygon>
+            <agm-polyline *ngIf="polyline" strokeColor="#FFFFFF" >
+              <agm-polyline-point [latitude]="latA" [longitude]="lngA">
+              </agm-polyline-point>
+              <agm-polyline-point [latitude]="latB" [longitude]="lngB">
+              </agm-polyline-point>
+          </agm-polyline>
+          </agm-map>
+        
+        </ion-col>
+        <ion-col size="12" >
+            <ion-list *ngIf="servicio" lines= "none">
+                <ion-item >
+                    <ion-label>
+                        Empresa:  {{servicio.nombre}}
+                    </ion-label>
+                </ion-item>
+                <ion-item >
+                    <ion-label>
+                        Inicio:  {{servicio.origen}}
+                    </ion-label>
+                </ion-item>
+                <ion-item >
+                    <ion-label>
+                        Destino:  {{servicio.destino}}
+                    </ion-label>
+                </ion-item>
+              </ion-list>
+        </ion-col>
+      </ion-row>
 </ion-content>
