@@ -1,9 +1,9 @@
 <ion-header>
   <ion-toolbar color="light">
-     <ion-buttons slot="start">
-      <ion-back-button defaultHref="tabs"></ion-back-button>
+     <ion-buttons  slot="start">
+      <ion-back-button  color="medium" defaultHref="tabs"></ion-back-button>
       </ion-buttons>
-     <ion-title>Crear Servicio
+     <ion-title color="medium">Crear Servicio
      </ion-title>
   </ion-toolbar>
  </ion-header>
@@ -11,7 +11,7 @@
 <ion-content padding>
 
     <ion-toolbar color="light">
-                 <ion-label>&nbsp;&nbsp;&nbsp;&nbsp;origen</ion-label>
+                 <ion-label color="medium" >&nbsp;&nbsp;&nbsp;&nbsp;origen</ion-label>
              </ion-toolbar>
              <ion-list>
              <ion-item>
@@ -55,18 +55,17 @@
             
             </ion-list>
             <ion-item>
-                <ion-label position="floating">Ciudad/ Municipio / vereda</ion-label>
+                <ion-label position="floating">Ciudad/ Municipio / Vereda</ion-label>
                 <ion-input [(ngModel)]="servicio.origen"></ion-input>
                 
               </ion-item>
               <ion-item>
                   <ion-label position="floating">Dirección de Origen</ion-label>
-                  <ion-input type = "text"  [(ngModel)]="origin"  name ="origin"></ion-input>
-                  <ion-input></ion-input>
-                </ion-item>
+                  <ion-input type = "text"  [(ngModel)]="servicio.direccioninicio"  name ="servicio.direccioninicio"></ion-input>
+              </ion-item>
 
               <ion-toolbar color="light">
-                  <ion-label>&nbsp;&nbsp;&nbsp;&nbsp;Destino</ion-label>
+                  <ion-label color="medium" >&nbsp;&nbsp;&nbsp;&nbsp;Destino</ion-label>
               </ion-toolbar>
               <ion-list>
               <ion-item>
@@ -113,19 +112,18 @@
              
              </ion-list>
              <ion-item>
-                 <ion-label position="floating">Ciudad/ Municipio / vereda</ion-label>
+                 <ion-label position="floating">Ciudad/ Municipio / Vereda</ion-label>
                  <ion-input [(ngModel)]="servicio.destino"></ion-input>
                 
                </ion-item>
                <ion-item>
                   <ion-label position="floating">Dirección de Destino</ion-label>
-                  <ion-input type = "text"  [(ngModel)]="destination"  name ="destination"></ion-input>
-                  <ion-input></ion-input>
-                </ion-item>
+                  <ion-input type = "text"  [(ngModel)]="servicio.direccionfinal"  name ="servicio.direccionfinal"></ion-input>
+               </ion-item>
 
 
                <ion-toolbar color="light">
-                  <ion-label>&nbsp;&nbsp;&nbsp;&nbsp;Información</ion-label>
+                  <ion-label color="medium">&nbsp;&nbsp;&nbsp;&nbsp;Información</ion-label>
               </ion-toolbar>
               <ion-item>
                   <ion-label>Fecha Inicio de Carga</ion-label>
@@ -139,30 +137,36 @@
 
                   <ion-item>
                       <ion-label position="floating">Valor del anticipo $</ion-label>
-                      <ion-input></ion-input>
+                      <ion-input [(ngModel)]="servicio.anticipo"></ion-input>
                     </ion-item>
 
                     <ion-item>
                         <ion-label position="floating">Valor del Flete $</ion-label>
                         <ion-input [(ngModel)]="servicio.flete"></ion-input>
-                        <ion-input></ion-input>
-                      </ion-item>
+                     </ion-item>
 
                       <ion-item>
                           <ion-label position="floating">Evento</ion-label>
                           <ion-input [(ngModel)]="servicio.evento"></ion-input>
                         </ion-item>
+
                         <ion-item>
-                            <ion-label position="stacked">estado</ion-label>
+                            <ion-label position="floating">Estado</ion-label>
                             <ion-input [(ngModel)]="servicio.estado"></ion-input>
                           </ion-item>
                           <ion-item>
-                            <ion-label position="stacked">monbre de empresa</ion-label>
+                            <ion-label position="floating">Nombre de Empresa</ion-label>
                             <ion-input [(ngModel)]="servicio.nombre"></ion-input>
                           </ion-item>
+
+                          <ion-item>
+                          <ion-label position="floating">Descripción</ion-label>
+                          <ion-input [(ngModel)]="servicio.descripcion"></ion-input>
+                        </ion-item>
+
                             <hr>
                             <hr>
 
-                          <ion-button (click)="clicBoton()" color="light" size="large" expand="block" style="color:white " >Solicitar Servicio</ion-button>
+                          <ion-button  (click)="clicBoton()"  routerLink="/mapa"  color="light" size="large" expand="block"  ><span style="color: #ffffff;">Solicitar Servicio</span></ion-button>
 
 </ion-content>

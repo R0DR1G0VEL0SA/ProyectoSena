@@ -8,6 +8,7 @@ import {  LoadingController } from '@ionic/angular';
 ///////////////////////////
 import { Marcadores } from '../../marcador/marcadores';
 import { Storage } from '@ionic/storage';
+import { map } from 'rxjs/operators';
 /////////////////////////////////
 
 
@@ -122,8 +123,10 @@ async geolocalizacion(){
   const mapEle: HTMLElement = document.getElementById('map');
   this.mapRef = new google.maps.Map(mapEle, {
     center: myLatLng,
-    zoom:12
+    zoom:12,
+    
   }); 
+  console.log(map)
   
 }
 

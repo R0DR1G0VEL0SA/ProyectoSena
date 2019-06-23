@@ -20,6 +20,10 @@ export class GenerarServicioPage implements OnInit {
     evento: '',
     estado: '',
     nombre: '',
+    direccioninicio: '',
+    direccionfinal: '',
+    anticipo:'',
+    descripcion:'',
     
 
   }  
@@ -44,6 +48,10 @@ export class GenerarServicioPage implements OnInit {
         this.servicio.evento = '';
         this.servicio.estado = '';
         this.servicio.nombre = '';
+        this.servicio.direccioninicio = '';
+        this.servicio.direccionfinal = '';
+        this.servicio.anticipo = '';
+        this.servicio.descripcion = '';
       }
     )
   }

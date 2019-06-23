@@ -21,6 +21,10 @@ export class Servicio1Service {
         evento: servicio.evento,
         estado: servicio.estado,
         nombre: servicio.nombre,
+        direccioninicio: servicio.direccioninicio,
+        direccionfinal: servicio.direccionfinal,
+        anticipo: servicio.anticipo,
+        descripcion: servicio.descripcion,
       })
       .then(
         res => resolve(res),
