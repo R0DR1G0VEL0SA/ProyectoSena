@@ -22,7 +22,6 @@ export class DetailCarPage implements OnInit {
     this.carId = this.route.snapshot.params['id'];
     if (this.carId) {
       this.loadCar();
-      console.log(this.carId);
     }
   }
   async loadCar() {

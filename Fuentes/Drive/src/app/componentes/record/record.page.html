@@ -8,5 +8,18 @@
 </ion-header>
 
 <ion-content>
+    <ion-list >
+        <ion-item *ngFor="let item of [0]">
+            
+                  <img class="icon" src="assets/icon/delivery.svg" >
+                </ion-item>
+          
+                <ion-item lines ="none">
+                    <ion-chip color="danger">
+                       <ion-icon name="pin" ></ion-icon>
+                    <ion-label>No tienes historial  asignado en el momento!</ion-label>
+                    </ion-chip>
+          </ion-item>
+   </ion-list>
 
 </ion-content>

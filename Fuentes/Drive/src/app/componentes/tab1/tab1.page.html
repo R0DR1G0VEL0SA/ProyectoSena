@@ -13,7 +13,7 @@
               <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
             </p>
             <p>
-              <ion-skeleton-text animated style="width: 600%"></ion-skeleton-text>
+              <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
             </p>
           </ion-label>
         </ion-item>
@@ -24,14 +24,13 @@
                 <ion-avatar slot="start">
                   <img src="assets/icon/map.svg">
                 </ion-avatar>
-                <ion-label>
+                <ion-label >
                   <p>Empresa : {{servicio.nombre }}</p>
                   <p>Valor Flete : ${{servicio.flete }}</p>
                   <p>Origen : {{servicio.origen }} </p>
                   <p>Destino : {{servicio.destino }} </p>
-                  <p>Valor id : {{servicio.id}}</p>
                 </ion-label>
-                <ion-note color="success" slot="end" *ngIf="servicio.evento">{{ servicio.evento}}</ion-note>
+                <ion-note color="dark" slot="end" *ngIf="servicio.evento">{{ servicio.evento}}</ion-note>
               </ion-item>
             </ion-item-sliding>
           </ion-list>

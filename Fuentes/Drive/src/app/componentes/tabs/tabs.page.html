@@ -1,8 +1,11 @@
-<ion-header>
-    <ion-toolbar color="danger">
+<ion-header >
+    <ion-toolbar color="danger" >
         <ion-buttons slot="start">
           <ion-menu-button></ion-menu-button>
-          </ion-buttons>
+        </ion-buttons>
+        <ion-buttons slot="end">
+            <ion-icon slot="icon-only" name="more"></ion-icon>
+        </ion-buttons>
       <ion-title>Servicios de Carga</ion-title>
     </ion-toolbar>
   </ion-header>
@@ -37,10 +40,6 @@
           <ion-icon src="assets/icon/camion.svg" slot="start"></ion-icon>
           <ion-label>Info vehículo</ion-label>
         </ion-item>
-        <ion-item routerLink="/trailer" detail>
-          <ion-icon src="assets/icon/trailer.svg" slot="start"></ion-icon>
-          <ion-label>Info Trailer</ion-label>
-        </ion-item>
         <ion-item routerLink="/record" detail>
           <ion-icon src="assets/icon/mapa.svg"slot="start"></ion-icon>
           <ion-label>Historial de viajes</ion-label>
@@ -65,19 +64,19 @@
   
       <ion-tabs >
   
-          <ion-tab-bar slot="top" color= "blank">
+          <ion-tab-bar slot="top" >
             <ion-tab-button tab="tab1">
-              <ion-icon name="Disponible"></ion-icon>
-              <ion-label>Nuevo</ion-label>
+              <ion-icon name="clipboard"></ion-icon>
+              <ion-label>Disponible</ion-label>
             </ion-tab-button>
         
             <ion-tab-button tab="tab2">
-              <ion-icon name="En Proceso"></ion-icon>
+              <ion-icon name="contrast"></ion-icon>
               <ion-label>En Proceso</ion-label>
             </ion-tab-button>
         
             <ion-tab-button tab="tab3">
-              <ion-icon name="Asignado"></ion-icon>
+              <ion-icon name="done-all"></ion-icon>
               <ion-label>Asignado</ion-label>
             </ion-tab-button>
           </ion-tab-bar>

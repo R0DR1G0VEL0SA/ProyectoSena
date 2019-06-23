@@ -20,46 +20,10 @@
       </ion-fab-list>
    </ion-fab>
 
-<!-- Default Animations -->
-<ion-list *ngIf="!persons.length">
-  <ion-card *ngFor="let item of [0]" padding>
-    <ion-label>
-      <h3>
-        <ion-skeleton-text animated style="width: 30%"></ion-skeleton-text>
-      </h3>
-    </ion-label>
-    <ion-label>
-      <h3>
-        <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
-      </h3>
-    </ion-label>
-    <ion-label>
-      <h3>
-        <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
-       </h3>
-    </ion-label>
-    <ion-label>
-        <h3>
-          <ion-skeleton-text animated style="width: 30%"></ion-skeleton-text>
-        </h3>
-    </ion-label>
-    <ion-label>
-        <h3>
-          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
-        </h3>
-    </ion-label>
-    <ion-label>
-         <h3>
-            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
-         </h3>
-     </ion-label>
-    
-  </ion-card>
-</ion-list>
-
-<ion-list>
-  <ion-card *ngFor="let person of persons" padding>
-      <ion-item>
+<ion-list *ngFor="let person of persons" >
+  <img class="icon" src="assets/icon/login.svg" >
+  
+      <ion-item >
           <p> Nombre : {{ person.nombres }} {{ person.apellidos }}</p>
       </ion-item>
       <ion-item>
@@ -77,8 +41,7 @@
       <ion-item>
           <p>Rol : Conductor </p>
       </ion-item>
-      <br>
-  </ion-card>
+      
 </ion-list>
 
 

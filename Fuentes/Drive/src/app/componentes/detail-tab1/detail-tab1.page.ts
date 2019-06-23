@@ -46,7 +46,6 @@ export class DetailTab1Page implements OnInit {
     this.servicioId = this.route.snapshot.params['id'];
     if (this.servicioId) {
       this.loadServicio();
-      console.log(this.servicioId);
     }
 
 
@@ -90,7 +89,6 @@ export class DetailTab1Page implements OnInit {
     this.servicioService.getServicio(this.servicioId).subscribe(servicio=> {
       loading.dismiss();
       this.servicio = servicio;
-      console.log(servicio.id);
     });
   }
 

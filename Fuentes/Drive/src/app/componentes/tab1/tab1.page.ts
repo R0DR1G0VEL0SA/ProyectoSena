@@ -25,7 +25,6 @@ export class Tab1Page implements OnInit{
     
     this.serviciosSubscription = this.servicioService.getServicios().subscribe(data => {
       data.forEach(element => {
-        console.log("T: "+element.estado);
         if(element.estado.toString() === "1")
         {  
           this.servicios.push(element);
