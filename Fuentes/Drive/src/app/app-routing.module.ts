@@ -4,9 +4,10 @@ import { AuthGuard } from './guards/auth.guard';
 import { NoLoginGuard } from './guards/nologin.guard';
 
 const routes: Routes = [
-  { path: 'intro', redirectTo: './componentes/intro/intro.module#IntroPageModule' },
+  { path: 'into', redirectTo: './componentes/into/into.module#IntoPageModule' },
+  { path: '', loadChildren: './componentes/into/into.module#IntoPageModule' },
+  { path: 'login', loadChildren: './componentes/login/login.module#LoginPageModule' , canActivate : [NoLoginGuard]},
   { path: '', loadChildren: './componentes/tabs/tabs.module#TabsPageModule', canActivate : [AuthGuard]},
-  { path: 'login', loadChildren: './componentes/login/login.module#LoginPageModule', canActivate : [NoLoginGuard] },
   { path: 'register', loadChildren: './componentes/register/register.module#RegisterPageModule' },
   { path: 'reset-password', loadChildren: './componentes/reset-password/reset-password.module#ResetPasswordPageModule' },
   { path: 'role', loadChildren: './componentes/role/role.module#RolePageModule' },
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'detail-tab1', loadChildren: './componentes/detail-tab1/detail-tab1.module#DetailTab1PageModule' },
   { path: 'detail1/:id', loadChildren: './componentes/detail-tab1/detail-tab1.module#DetailTab1PageModule' },
   { path: 'detail1', loadChildren: './componentes/detail-tab1/detail-tab1.module#DetailTab1PageModule' }
+
 
 
 

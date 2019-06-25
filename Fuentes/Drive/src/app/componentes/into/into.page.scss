@@ -1,0 +1,35 @@
+ion-content.background{
+    --background: url(../../assets/img/fondo7.jpg) 0 0/100% 100% no-repeat ;
+}
+
+ion-slide{
+   display: block;
+}
+
+.slide-img-padding{
+    margin-top: 15%;
+    padding: 15%;
+   // opacity: 0.7;
+}
+h2{
+    font-size: 20px;
+    font-weight: lighter;
+    color: aliceblue;
+}
+h3{
+    font-size: 40px;
+    font-weight: lighter;
+    margin-bottom: 30px;
+    color: aliceblue;
+}
+h4{
+    font-size: 15px;
+    font-weight: lighter;
+    color: aliceblue;
+
+}
+
+ion-chip{
+   margin-top: 85%;
+   font-size: 20px;
+}

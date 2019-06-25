@@ -46,7 +46,7 @@ export class TabsPage {
           text: 'Aceptar',
           handler: () => {
             this.Onlogout();
-            console.log('Confirm Okay');
+            
           }
         }
       ]

@@ -1,44 +1,28 @@
-
+<ion-header>
+    <ion-toolbar color="danger">
+      <ion-title>Log In</ion-title>
+    </ion-toolbar>
+  </ion-header>
 <ion-content padding class ="background" >
   <img class="icon" src="assets/icon/LOGO1.png" >
-  <div class ="center centro">
-
-    <ion-item color="white"class="inferior">
-      <ion-label position="floating" text color ="medium" > <ion-icon name="person" item-left></ion-icon>&nbsp;&nbsp;Usuario</ion-label>
+ 
+  <div padding>
+    <ion-item >
+      <ion-label   position="floating"  > <ion-icon name="person" item-left></ion-icon>&nbsp;&nbsp;Correo Electrónico</ion-label>
       <ion-input type = "text"  [(ngModel)] = "user" name ="user"></ion-input>
-</ion-item>
+   </ion-item>
 
-<ion-item color="white " class="inferior">
-  <ion-label position="floating"text color ="medium"><ion-icon name="lock" item-left></ion-icon>&nbsp;&nbsp;Contraseña</ion-label>
-  <ion-input type = "password" [(ngModel)] = "password" name ="password"></ion-input>
-</ion-item>
+   <ion-item  >
+     <ion-label   position="floating"><ion-icon name="lock" item-left></ion-icon>&nbsp;&nbsp;Contraseña</ion-label>
+     <ion-input type = "password" [(ngModel)] = "password" name ="password"></ion-input>
+   </ion-item>
 
-<ion-item lines="none" color="white " href="/reset-password"size="10px">
-
-<ion-label color="medium "    class="letra1">¿no recuerdas la clave?</ion-label>
-
-</ion-item >
-
-
-<ion-button  (click)="OnSubmitLogin()" expand="block" fill="outline" shape="round" class="botonfondo" size="200px">Iniciar sesión</ion-button>
-<hr>
-
-  
-  <ion-item   lines="none" color="white " (click)="pushRoleNavCtl()" >
-  <ion-label   color ="medium" class="letra" >¿Aun no tienes cuenta?</ion-label><ion-label (click)="pushRoleNavCtl()"  color ="warning " class="letra">Regìstrate</ion-label>
-</ion-item>
-
-
-
-</div>
+      <ion-label routerLink="/reset-password" class="letra1">¿no recuerdas la clave?</ion-label>
+      
+      <br> <br>
+       <ion-button  color="danger"(click)="OnSubmitLogin()" expand="block"  shape="round"  >Iniciar sesión</ion-button>
+       <br>
+       <ion-button  color="light" (click)="pushRoleNavCtl()" expand="block"  shape="round" >Registro</ion-button>
+    
+ </div>
 </ion-content>
-
-
-
-
-
-
-
-
-
-
