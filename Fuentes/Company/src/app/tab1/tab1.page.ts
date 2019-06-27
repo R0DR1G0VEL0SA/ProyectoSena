@@ -1,7 +1,10 @@
 import {Component, OnInit } from '@angular/core';
 import {AuthService } from '../servicios/auth.service';
 import {Geolocation } from '@ionic-native/geolocation/ngx';
-import {LoadingController } from '@ionic/angular';
+import { ServicioService } from './servicio.service';
+import { LoadingController, ToastController } from '@ionic/angular';
+import { Servicio } from '../../app/models/servicio';
+import { Subscription } from 'rxjs';
 
 declare var google;
 
@@ -10,56 +13,48 @@ declare var google;
   templateUrl: 'tab1.page.html',
   styleUrls: ['tab1.page.scss']
 })
-export class Tab1Page implements OnInit {
-  mapRef = null;
+export class Tab1Page implements OnInit{
+  private loading: any;
+  public servicios = new Array<Servicio>();
+  private serviciosSubscription: Subscription;
 
   constructor(public authservice: AuthService,
-    private geolocation: Geolocation,
-    private loadCtrl: LoadingController) {}
+              private loadingCtrl: LoadingController,
+              private servicioService: ServicioService,
+              private toastCtrl: ToastController) { }
 
-    //se crea un metodo encargado de cargar el mapa
-    ngOnInit(){
-    this.loadMap();
- }
+  ngOnInit() {
+    
+    this.serviciosSubscription = this.servicioService.getServicios().subscribe(data => {
+      data.forEach(element => {
+        if(element.estado.toString() === "1")
+        {  
+          this.servicios.push(element);
+        }
+      });
+        
+      })       
+  }
 
- Onlogout() {
-  this.authservice.logout();
-}
+  // tslint:disable-next-line: use-life-cycle-interface
+  ngOnDestroy() {this.serviciosSubscription.unsubscribe();}
 
- async loadMap(){
-  //muestra el loading
-  const loading = await this.loadCtrl.create();
-  loading.present();
-//  fin muestra el loading
-  const myLatLng= await this.getLocation();
-  const mapEle: HTMLElement = document.getElementById('map');
-  this.mapRef = new google.maps.Map(mapEle, {
-    center: myLatLng,
-    zoom:15
-  }); 
-    //muestra que se carga el mapa load
-  google.maps.event
-  .addListenerOnce(this.mapRef, 'idle', () =>{
-    loading.dismiss(); //se apaga el load
-    this.addMarker(myLatLng.lat, myLatLng.lng);
-  });
+  async Onlogout() {
+    await this.presentLoading();
 
-}
-  //crear el marker con metodos
-  private addMarker(lat: number, lng: number){
-   const marker = new google.maps.Marker({
-     position:{ lat, lng },
-     map: this.mapRef,
-
-   });
- }
-//metodo
- private async getLocation(){
-   const rta = await this.geolocation.getCurrentPosition();
-   return {
-     lat: rta.coords.latitude,
-     lng: rta.coords.longitude
-   };
- }
+    try {
+      await this.authservice.logout();
+    } catch (error) {
+      console.error(error);
+    } finally {
+      this.loading.dismiss();
+    }
+  }
+  async presentLoading() {
+    this.loading = await this.loadingCtrl.create({ message: 'Espere...' });
+    return this.loading.present();
+  }
+  
 
 }
+

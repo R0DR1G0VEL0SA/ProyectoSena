@@ -2,8 +2,16 @@
 
 <ion-content padding>
   
-  
-  <h3>listado de conductores que tiene en estudio los documentos</h3>
+  <ion-item *ngFor="let item of [0]">
+  <img class="icon" src="assets/icon/delivery.svg" >
+</ion-item>
 
+<ion-item lines ="none">
+    <ion-chip color="danger">
+       <ion-icon name="pin" ></ion-icon>
+    <ion-label>No tienes conductores que Requieran en estudio de documentos</ion-label>
+    </ion-chip>
+  
+</ion-item>
 
 </ion-content>

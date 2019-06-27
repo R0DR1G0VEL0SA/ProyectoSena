@@ -5,6 +5,7 @@ import { NoLoginGuard } from './guards/nologin.guard';
 
 const routes: Routes = [
   { path: 'intro', redirectTo: './componentes/intro/intro.module#IntroPageModule' },
+  { path: '', loadChildren: './componentes/intro/intro.module#IntroPageModule' },
   { path: '', loadChildren: './tabs/tabs.module#TabsPageModule' , canActivate : [AuthGuard]},
   { path: 'login', loadChildren: './componentes/login/login.module#LoginPageModule', canActivate : [NoLoginGuard] },
   { path: 'register', loadChildren: './componentes/register/register.module#RegisterPageModule' },
@@ -15,6 +16,10 @@ const routes: Routes = [
   { path: 'mapa', loadChildren: './componentes/mapa/mapa.module#MapaPageModule' },
   { path: 'driver', loadChildren: './componentes/driver/driver.module#DriverPageModule' },
   { path: 'support', loadChildren: './componentes/support/support.module#SupportPageModule' },
+  { path: 'detail-tab1', loadChildren: './componentes/detail-tab1/detail-tab1.module#DetailTab1PageModule' },
+
+  
+
 
 
 

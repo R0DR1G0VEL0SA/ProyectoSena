@@ -10,55 +10,19 @@
 <ion-content padding>
   <!-- fab placed to the top and end and on the top edge of the content overlapping header -->
   <ion-fab  vertical="top" horizontal="end" edge slot="fixed">
-      <ion-fab-button color="secondary">
-         <ion-icon name="filing"></ion-icon>
-      </ion-fab-button>
-      <ion-fab-list side="buttom">
-       <ion-fab-button>
-           <ion-icon name="create"></ion-icon>
-       </ion-fab-button>
-      </ion-fab-list>
-   </ion-fab>
+    <ion-fab-button color="secondary">
+       <ion-icon name="filing"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="buttom">
+     <ion-fab-button>
+         <ion-icon name="create"></ion-icon>
+     </ion-fab-button>
+    </ion-fab-list>
+ </ion-fab>
 
-<!-- Default Animations -->
-<ion-list *ngIf="!companys.length">
-  <ion-card *ngFor="let item of [0]" padding>
-    <ion-label>
-      <h3>
-        <ion-skeleton-text animated style="width: 30%"></ion-skeleton-text>
-      </h3>
-    </ion-label>
-    <ion-label>
-      <h3>
-        <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
-      </h3>
-    </ion-label>
-    <ion-label>
-      <h3>
-        <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
-       </h3>
-    </ion-label>
-    <ion-label>
-        <h3>
-          <ion-skeleton-text animated style="width: 30%"></ion-skeleton-text>
-        </h3>
-    </ion-label>
-    <ion-label>
-        <h3>
-          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
-        </h3>
-    </ion-label>
-    <ion-label>
-         <h3>
-            <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
-         </h3>
-     </ion-label>
-    
-  </ion-card>
-</ion-list>
 
-<ion-list>
-  <ion-card *ngFor="let Company of companys" padding>
+<ion-list *ngFor="let Company of companys">
+  <img class="icon" src="assets/icon/login.svg" >
       <ion-item>
           <p> Nombre : {{ Company.nombre }} </p>
       </ion-item>
@@ -81,7 +45,7 @@
           <p>Rol : EMPRESA </p>
       </ion-item>
       <br>
-  </ion-card>
+  
 </ion-list>
 
 
